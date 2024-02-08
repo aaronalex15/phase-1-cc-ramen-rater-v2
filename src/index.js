@@ -1,5 +1,11 @@
 // index.js
-
+const ramenMenu = document.getElementById('ramen-menu');
+ramenMenu.addEventListener('click', event => {
+    if (event.target.tagName === 'IMG') {
+        const ramenId = event.target.dataset.id;
+        handleClick(ramenId);
+    }
+});
 // Callbacks
 const handleClick = (ramen) => {
   // Add code
@@ -10,7 +16,8 @@ const addSubmitListener = () => {
 }
 
 const displayRamens = () => {
-  // Add code
+  return fetch()
+  
 };
 
 const main = () => {
